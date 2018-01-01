@@ -12,13 +12,17 @@
 %   Кофигуриране на пакети и опции.
 %----------------------------------------------------------------------------------------
 
-\documentclass[14pt,bulgarian,singlespacing,headsepline,oneside,openany]{MastersDoctoralThesis}
+\documentclass[12pt,bulgarian,singlespacing,headsepline,oneside,openany]{IICTBASDoctoralThesis}
+
+% Използване на UNICODE.
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
 
 % Рефериране на думи и други обекти.
 \usepackage{nameref}
 
-% Използване на UNICODE.
-\usepackage[utf8x]{inputenc}
+% Рефериране на хипер връзки.
+\usepackage{hyperref}
 
 % Кодировка за международни езици.
 \usepackage[T1]{fontenc}
@@ -40,9 +44,6 @@
 
 % Автоматично създаване на различните индекси.
 \usepackage{imakeidx}
-
-% Добавя възможност за сензитивни хипер-връзки в самия документ.
-% \usepackage{hyperref}
 
 % ???
 \usepackage{placeins}
@@ -82,7 +83,7 @@
 \degree{"Доктор на науките"} 
 
 % Имена на автора.
-\author{д-р инж. Тодор Димитров \textsc{Балабанов}}
+\author{\href{http://www.linkedin.com/in/todor-balabanov-2805393}{д-р инж. Тодор Димитров \textsc{Балабанов}}}
 
 % Служебен адрес.
 \addresses{ИИКТ-БАН, ул. "акад. Георги Бончев", блок 2, етаж 5, кабинет 514, град София 1113, България} 
@@ -131,25 +132,23 @@
 \begin{titlepage}
 \begin{center}
 
-% Лого на института.
-\includegraphics[width=0.1\linewidth]{logo-iict-bg}
-
-\vspace*{.06\textheight}
+\vspace*{.01\textheight}
 
 % Название на учебното заведение.
-%{\scshape\LARGE \univname\par}\vspace{1.5cm}
-
-% Работна група и отдел.
-%\groupname\\\deptname\\[2cm]
+{\scshape \LARGE \univname \\[0.5cm] 
+% Лого на института.
+\includegraphics[width=0.1\linewidth]{logo-iict-bg}
+\facname \\[0.5cm] 
+\deptname \par}\vspace{1.5cm}
  
 % Автор.
-%\authorname
+\authorname
 
 % Хоризонтална линия.
 \HRule \\[0.4cm]
 
 % Заглавие на дисертацията.
-{\huge \bfseries \ttitle\par}\vspace{0.4cm}
+{\huge \bfseries \ttitle \par}\vspace{0.4cm}
 
 % Хоризонтална линия.
 \HRule \\[1.5cm]
@@ -160,14 +159,15 @@
 \vfill
 
 % Текст изискван от учебното заведение.
-\large \textit{за присъждане на научна степен\\  \degreename}\\[0.3cm]
+\large \textit{за присъждане на научна степен\\ \degreename}\\[1.3cm]
 
-%TODO Област на дисертацията.
+%Област на дисертацията.
+\subjectname \vspace{1.5cm}
  
 \vfill
  
 % Година на предаване.
-{\large София\\2017}
+{\large София \\ 2017}
  
 \vfill
 \end{center}

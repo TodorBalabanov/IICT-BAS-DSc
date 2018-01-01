@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis 
+% IICT BAS Doctoral Thesis 
 % Class File
-% Version 1.4 (25/3/16)
+% Version 1.0 (01/01/2018)
 %
 % This class has been downloaded from:
 % http://www.LaTeXTemplates.com
@@ -26,8 +26,8 @@
 %----------------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\newcommand{\classname}{MastersDoctoralThesis}
-\ProvidesClass{\classname}[2016/03/25 v1.4 LaTeXTemplates.com]
+\newcommand{\classname}{IICTBASDoctoralThesis}
+\ProvidesClass{\classname}[2018/01/01 v1.0 LaTeXTemplates.com]
 \providecommand{\baseclass}{book}
 
 \RequirePackage{etoolbox}
@@ -279,6 +279,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\authorshipname}{Declaration of Authorship}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\authorshipname}{Declaration of Authorship} % Declaration of Authorship text for English countries
 \providecaptionname{german,ngerman,austrian,naustrian}{\authorshipname}{Eidesstattliche Erkl\"arung} % Declaration of Authorship text for Germanic countries
+\providecaptionname{bulgarian}{\authorshipname}{Декларация за оригиналност на резултатите} % Declaration of Authorship text for Bulgaria
 
 \newenvironment{declaration}{
 	\checktoopen
@@ -340,6 +341,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\abbrevname}{List of Abbreviations}
 \providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
 \providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
+\providecaptionname{bulgarian}{\abbrevname}{Списък с абревиатури}
 \NewDocumentEnvironment{abbreviations}{ m }{%
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
 	\ifbool{listtoc}{\addchap{\abbrevname}}{\addchap*{\abbrevname}}
@@ -393,6 +395,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\acknowledgementname}{Acknowledgements}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementname}{Acknowledgements} % Acknowledgement text for English countries
 \providecaptionname{german,ngerman,austrian,naustrian}{\acknowledgementname}{Danksagung} % Acknowledgement text for Germanic countries
+\providecaptionname{bulgarian}{\acknowledgementname}{Благодарности} % Acknowledgement text for Bulgaria
 
 \NewDocumentEnvironment{acknowledgements}{}{%
 \checktoopen
