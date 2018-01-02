@@ -95,7 +95,7 @@
 \keywords{} 
 
 % Учебно заведение.
-\university{\href{http://bas.bg}{Българската академия на науките}}
+\university{\href{http://bas.bg}{Българска академия на науките}}
 
 % Подразделение.
 \faculty{\href{http://iict.bas.bg}{Институт по информационни и комуникационни технологии}} 
@@ -106,11 +106,11 @@
 % Параметри на генерирания PDF файл.
 \AtBeginDocument{
 % Заглавие на PDF файла.
-%	\hypersetup{pdftitle=\ttitle}
+	\hypersetup{pdftitle=\ttitle}
 % Автор на PDF файла.
-%	\hypersetup{pdfauthor=\authorname}
+	\hypersetup{pdfauthor=\aname}
 % Ключови думи на PDF файла.
-%	\hypersetup{pdfkeywords=\keywordnames}
+	\hypersetup{pdfkeywords=\keywordnames}
 }
 
 %----------------------------------------------------------------------------------------
@@ -135,20 +135,27 @@
 \vspace*{.01\textheight}
 
 % Название на учебното заведение.
-{\scshape \LARGE \univname \\[0.5cm] 
+{\scshape \LARGE 
+% Лого на академията.
+\includegraphics[width=0.08\linewidth]{logo-bas-bg}
+\univname \\[0.5cm] 
 % Лого на института.
 \includegraphics[width=0.1\linewidth]{logo-iict-bg}
 \facname \\[0.5cm] 
-\deptname \par}\vspace{1.5cm}
+\deptname \par}
+
+\vspace{1.5cm}
  
 % Автор.
-\authorname
+\aname
+
+\vspace{1.5cm}
 
 % Хоризонтална линия.
 \HRule \\[0.4cm]
 
 % Заглавие на дисертацията.
-{\huge \bfseries \ttitle \par}\vspace{0.4cm}
+{\large \bfseries \ttitle \par}\vspace{0.4cm}
 
 % Хоризонтална линия.
 \HRule \\[1.5cm]
@@ -167,7 +174,7 @@
 \vfill
  
 % Година на предаване.
-{\large София \\ 2017}
+{\large София \\ 2018}
  
 \vfill
 \end{center}
@@ -178,6 +185,24 @@
 %----------------------------------------------------------------------------------------
 
 \begin{declaration}
+
+\vspace{2cm}
+
+Декларирам, че настоящата дисертация съдържа оригинални резултати, получени при проведените от мен научни изследвания. Резултатите, които са получени, описани и/или публикувани от други учени, са надлежно и подробно цитирани в библиографията.
+
+\vspace{0.5cm}
+
+Настоящата дисертация не е представяна в процедури за придобиване на научна степен в друго висше училище, университет или научен институт.
+
+\vspace{2cm}
+
+\hspace{4cm}
+Подпис: 
+
+\vspace{0.25cm}
+
+\hspace{5cm}
+/ \aname /
 \end{declaration}
 
 %----------------------------------------------------------------------------------------

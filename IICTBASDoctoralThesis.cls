@@ -25,6 +25,8 @@
 %	CLASS DEFINITION AND PARAMETERS
 %----------------------------------------------------------------------------------------
 
+\usepackage[utf8x]{inputenc}
+
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
 \newcommand{\classname}{IICTBASDoctoralThesis}
 \ProvidesClass{\classname}[2018/01/01 v1.0 LaTeXTemplates.com]
@@ -233,7 +235,7 @@
 \automark*[section]{}%
 }
 \providepairofpagestyles[thesisSimple]{review}{%
-	\ofoot[\ttitle/\authorname]{\ttitle/\authorname}
+	\ofoot[\ttitle/\aname]{\ttitle/\aname}
 	\ifoot[\today]{\today}
 }
 \pagestyle{thesis}
@@ -257,13 +259,13 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	DEFINE CUSTOM THESIS INFORMATION COMMANDS
 %----------------------------------------------------------------------------------------
 
-\def\authorname{}
 \def\ttitle{}
-\newcommand*{\supervisor}[1]{\def\supname{#1}}
+\def\aname{}
 \newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
+\renewcommand*{\author}[1]{\def\aname{#1}}
+\newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
 \newcommand*{\degree}[1]{\def\degreename{#1}}
-\renewcommand*{\author}[1]{\def\authorname{#1}}
 \newcommand*{\addresses}[1]{\def\addressname{#1}}
 \newcommand*{\university}[1]{\def\univname{#1}}
 \newcommand*{\department}[1]{\def\deptname{#1}}
@@ -279,7 +281,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\authorshipname}{Declaration of Authorship}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\authorshipname}{Declaration of Authorship} % Declaration of Authorship text for English countries
 \providecaptionname{german,ngerman,austrian,naustrian}{\authorshipname}{Eidesstattliche Erkl\"arung} % Declaration of Authorship text for Germanic countries
-\providecaptionname{bulgarian}{\authorshipname}{Декларация за оригиналност на резултатите} % Declaration of Authorship text for Bulgaria
+\providecaptionname{bulgarian}{\authorshipname}{Декларация за оригиналност \\ на  резултатите} % Declaration of Authorship text for Bulgaria
 
 \newenvironment{declaration}{
 	\checktoopen
@@ -326,7 +328,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\bigskip
 	{\normalsize\bfseries \@title \par} % Thesis title
 	\medskip
-	{\normalsize \byname{} \authorname \par} % Author name
+	{\normalsize \byname{} \aname \par} % Author name
 	\bigskip
 	\end{center}
 }
@@ -341,7 +343,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\abbrevname}{List of Abbreviations}
 \providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
 \providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
-\providecaptionname{bulgarian}{\abbrevname}{Списък с абревиатури}
+\providecaptionname{bulgarian}{\abbrevname}{Списък с абревиатурите}
 \NewDocumentEnvironment{abbreviations}{ m }{%
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
 	\ifbool{listtoc}{\addchap{\abbrevname}}{\addchap*{\abbrevname}}
